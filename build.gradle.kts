@@ -93,16 +93,36 @@ tasks.register<Exec>("jpackageWin") {
 
     executable = jpackageExe.absolutePath
     args(
-        "--type", "exe",
-        "--name", appName,
-        "--app-version", appVer,
+        "--type", "msi",
+        "--name", "MyVault",
+        "--app-version", "1.0.0",
+        "--vendor", "MyVault",                     // shows in installer & Apps & Features
+        "--description", "A secure, local-first password vault.",
+        "--about-url", "https://myvault.co.uk",
+        "--win-help-url", "https://myvault.co.uk/support",
+
         "--input", inputDir.absolutePath,
         "--main-jar", mainJar,
         "--main-class", "vault.PasswordVaultFX",
         "--icon", iconFile.absolutePath,
-        "--win-menu",
-        "--win-shortcut",
-        "--vendor", "MyVault",
+
+        // Windows niceties
+        "--win-menu",                                  // Start Menu entry
+        "--win-menu-group", "MyVault",               // Start Menu folder
+        "--win-shortcut",                              // Desktop shortcut
+        "--win-shortcut-prompt",                       // ask user if they want shortcut
+        "--install-dir", "MyVault",             // subfolder under default install root
+        "--win-per-user-install",                      // no admin prompt (installs to user profile)
+        "--win-dir-chooser",                           // let user choose folder
+
+        // Keep this stable across releases for proper upgrades
+        "--win-upgrade-uuid", "b6d8f8af-7b5b-4e24-9a7a-4f7a0d7c6a11",
+
+        // JVM options (tune memory etc.)
+        "--java-options", "-Xms128m",
+        "--java-options", "-Xmx512m",
+        "--java-options", "-Dfile.encoding=UTF-8",
+
         "--dest", project.layout.projectDirectory.dir("dist").asFile.absolutePath
     )
 }

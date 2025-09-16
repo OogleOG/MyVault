@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/build/reports/problems/problems-report.html;C:/Users/leigh/Documents/password-vault/src/main/java/vault/backup/PasswordVaultFXBackup.java;C:/Users/leigh/Documents/password-vault/src/main/java/vault/licensing/LicenseManager.java;C:/Users/leigh/Documents/password-vault/src/main/java/vault/util/MachineId.java;C:/Users/leigh/Documents/password-vault/src/main/java/vault/PasswordVaultApp.java;C:/Users/leigh/Documents/password-vault/src/main/java/vault/PasswordVaultFX.java;C:/Users/leigh/Documents/password-vault/tools/LicenseSigner.java;C:/Users/leigh/Documents/password-vault/build.gradle.kts;C:/Users/leigh/Documents/password-vault/README-LICENSES.md;C:/Users/leigh/Documents/password-vault/settings.gradle.kts" />
+  </component>
+</project>
